@@ -40,7 +40,6 @@ Shoes.app do
   end
 
   def sphero
-    puts 'my sphero method'
     @robot.sphero
   end
 
@@ -55,6 +54,8 @@ Shoes.app do
 
   para 'Have fun playing with your sphero.'
   para 'Use wasd to control, escape to quit'
+  para 'use r, g or b to change the color to red, green or blue'
+  para 'use page up/down to increase/decrease speed'
   @speed_para = para ''
   update_speed_text
 
@@ -83,6 +84,9 @@ Shoes.app do
     when *BREAK_KEYS
       @speed -= 10
       update_speed_text
+    when 'c'
+      color = ask_color
+      sphero_color color.red, color.green, color.blue
     else
       puts "Sphero don't know what to do... :-(" + key.to_s
     end
