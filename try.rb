@@ -8,6 +8,7 @@ work do
 
   every(3.seconds) do
     puts "Rolling..."
+    sphero.set_color rand(256), rand(256), rand(256)
     if @rolling
       sphero.stop
       @rolling = false
