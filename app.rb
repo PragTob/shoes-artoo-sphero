@@ -44,13 +44,19 @@ Shoes.app do
     @robot.sphero
   end
 
-  @robot = MySphero.new
-  @robot.work
+  def update_speed_text
+    @speed_para.text = "Your current speed is #{@speed}"
+  end
+
+  #@robot = MySphero.new
+  #@robot.work
   @speed = 50
 
 
   para 'Have fun playing with your sphero.'
   para 'Use wasd to control, escape to quit'
+  @speed_para = para ''
+  update_speed_text
 
 
   keypress do |key|
@@ -73,10 +79,10 @@ Shoes.app do
       sphero_color 0, 0, 255
     when *ACCLERATE_KEYS
       @speed += 10
-      para 'current speed ' + @speed.to_s
+      update_speed_text
     when *BREAK_KEYS
       @speed -= 10
-      para 'current speed ' + @speed.to_s
+      update_speed_text
     else
       puts "Sphero don't know what to do... :-(" + key.to_s
     end
