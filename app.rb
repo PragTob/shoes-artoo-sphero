@@ -47,8 +47,8 @@ Shoes.app do
     @speed_para.text = "Your current speed is #{@speed}"
   end
 
-  #@robot = MySphero.new
-  #@robot.work
+  @robot = MySphero.new
+  @robot.work
   @speed = 50
 
 
