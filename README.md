@@ -86,3 +86,5 @@ bundle exec jruby app.rb
 ```
 bundle exec jruby -J-XstartOnFirstThread app.rb
 ```
+
+Have fun driving around. Notice that the app does not know where exactly the front of the sphero is so thinks might get interesting :-)
