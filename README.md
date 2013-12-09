@@ -3,6 +3,8 @@ shoes-artoo-sphero
 
 Playing with controlling a sphero from shoes with the help of artoo. More to come here - it's pretty simple atm =)
 
+So far you can let the sphero roll forward/left/right/back, stop it, change the speed and change the color - all within a nice little shoes GUI :-)
+
 Still a bit under development/fun time. This only works for Linux/OSX due to dependencies not running on Windows. Sorry.
 
 ## Setting up
