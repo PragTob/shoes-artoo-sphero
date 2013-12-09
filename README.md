@@ -42,7 +42,7 @@ Now you are ready to connect to the Sphero using the socket, in this example por
 artoo connect serial Sphero-WRW 8023
 ```
 
-### Ubuntu
+### Linux (original is Ubuntu, works well for at least Debian)
 
 The main steps are:
 - Pair your computer and the Sphero
